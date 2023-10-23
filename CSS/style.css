@@ -1,0 +1,827 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,700");
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family:poppins;
+  scroll-behavior: smooth;
+}
+
+
+/* Header CSS */
+#header {
+  background-color: #061757;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.header .icon {
+  color: white;
+  margin-right: 5px;
+}
+
+.header .icon:hover {
+  color: #e52c48;
+}
+
+.header .left-section {
+  margin-bottom: 10px;
+}
+
+.header .left-section span {
+  display: inline-block;
+  margin-top: -3px;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+.header .right-section {
+  display: flex;
+  justify-content: center;
+}
+
+.header .right-section .icon {
+  margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header .left-section {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Navbar Styles */
+.navbar {
+  margin: 25px;
+  margin-top: -9px;
+  display: flex;
+  background-color: #e52c48;
+  border-radius: 10px;
+  transition: all ease-in-out 0.3;
+}
+
+.navbar li a:hover {
+  color: white;
+}
+
+.navbar a {
+  float: left;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+}
+
+.navbar a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -10px;
+  left: 0;
+  background-color: #444444;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover:after,
+.navbar a.active:after {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar-collapse {
+  flex-grow: unset !important;
+}
+
+/* Get To Quote Button */
+
+.navbar .get {
+  color: #fff;
+  padding: 25px 30px;
+  margin-top: -11px;
+  display: block;
+  margin-left: auto !important;
+  margin-bottom: -7px;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #292929;
+}
+
+.navbar .get:hover {
+  background-color: white;
+  color: #292929;
+  cursor: pointer;
+}
+
+
+/* Toggle Button */
+.navbar-toggler {
+  color: white;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 30px;
+  height: 2.7px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 767px) {
+  .title {
+    justify-content: center;
+  }
+  .slide-content{
+    text-align: center;
+    font-size: medium;
+  }
+  .finance {
+    text-align: center;
+  }
+  .finance1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-content {
+      text-align: center;
+  }
+
+  .slide-content .text {
+      margin-bottom: 20px;
+  }
+  
+  .slide-content .text  h2{
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+
+}
+  .slide-content .text .btn-arrow {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+  }
+}
+
+
+
+
+/* Tags and Paragraph CSS */
+
+.tag {
+  font-size: 29px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.58px;
+  color: #e52c48;
+}
+
+.finance {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  line-height: 1.2em;
+  color: #061757;
+  margin-top: 20px;
+}
+
+
+.finance1 {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.blog {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.58px;
+}
+
+
+
+/* Buttons CSS */
+.btn {
+  box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.17);
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 10%;
+  padding: 15px 16px !important;
+}
+.btn span {
+  color: #e52c48;
+  font-weight: 500;
+  font-size: 17px;
+}
+.btn:hover {
+  background-color: #e52c48;
+}
+.btn:hover span {
+  color: white;
+}
+
+
+/* Slider CSS */
+
+#slider {
+  margin-top: 7%;
+  margin-bottom: 10%;
+}
+
+.slide-container {
+  display: block;
+  margin-top: 20px;
+  position: relative;
+  height: 450px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  width: 320px;
+  box-shadow: 2px 2px 2px 2px #d4cece;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.slide-container:first-child {
+  margin-right: 2%;
+}
+
+.slide-container:last-child {
+  margin-left: 2%;
+}
+.slide-container h2 {
+  color: #061757;
+}
+.slide-container:hover h2  {
+  color: white;
+}
+.slide-container:hover   {
+  background-color: #061757;
+}
+.slide-container:hover .btn-arrow {
+  background-color: #e52c48;
+}
+.slider1{
+  padding: 40px 0px 0px 0px;
+}
+
+.slide-container:hover .slide-content {
+  color: white;
+}
+.slide-content {
+  position: absolute;
+  top:50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #061757;
+}
+.slide-content .text p{
+  width: 130%;
+}
+
+.carousel-indicators {
+  justify-content: center;
+  z-index: 15;
+  margin-bottom: -8%;
+}
+.carousel-indicators li {
+  width: 12px;
+  margin: 7px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #061757;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators li.active {
+  background-color: #e52c48;
+  width: 24px;
+  border-radius: 6px;
+}
+
+
+/* Arrow On Slider CSS */
+
+.btn-arrow {
+  display: inline-block;
+  padding: 15px;
+  background-color: #061757;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  margin-top: 15%;
+  cursor: pointer;
+}
+
+.card-body:hover  .arrow-style i{
+background-color:#e52c48 !important;
+}
+
+.btn-arrow::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 7px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.btn-arrow:hover::after {
+  border-top-color: white;
+  border-right-color: white;
+}
+
+
+/* Services Slider CSS */
+.card{
+  background-color: #fff;
+}
+
+.card:hover h3{
+  color: #fff !important; 
+}
+.card:hover{
+  background-color: #061757;
+}
+.card:hover .a
+{
+  color: #fff;
+}
+
+
+/* Slider Background Images */
+.simg
+{
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  opacity: 0;
+}
+.card:hover .simg{
+  opacity: 1;
+}
+.slide-container:hover .simg
+{
+  opacity: 1;
+}
+
+
+
+
+
+
+.blog {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #061757;
+  background-color: #f1f1f1;
+}
+
+
+
+.containerimg {
+  position: relative;
+  text-align: center;
+  color: white;
+  opacity: 0.9;
+}
+
+.centered:hover {
+  background-color: #d92a43;
+}
+.centered {
+  position: absolute;
+  top: 55%;
+  left: 48%;
+  background-color: #030923;
+  opacity: 0.65;
+
+  transform: translate(-50%, -50%);
+}
+.circle:hover {
+  background-color: red !important;
+}
+
+@media (max-width: 768px) {
+  .slide-container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+a {
+  text-decoration: none !important;
+}
+a p:hover {
+  color: #e52c48 !important;
+}
+
+#name_input,#email_input {
+  background-color: #0a347e !important;
+  padding: 17px 20px 15px;
+  border-radius: 15px !important;
+  border: none !important;
+}
+#email_input::placeholder, #name_input::placeholder {
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+
+.info {
+  display: block;
+  margin-top: 30px;
+}
+.info span {
+  color: #061757;
+  font-size: 15px;
+  margin: 0px 10px 0px 0px;
+  font-weight: 700;
+  padding: 10px;
+}
+.info .number {
+  display: block;
+  margin-left: 20%;
+}
+
+
+
+/* For Signature CSS */
+#signature-container {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+#signature {
+  display: inline-block;
+  opacity: 0;
+  animation: revealSignature 2s linear forwards;
+}
+
+@keyframes revealSignature {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.section {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.section img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+
+
+
+/* Our Blog */
+.date
+{
+  font-size: 11px;
+   margin-left: -50%; 
+    margin-top: 20%;
+    font-weight: 600;
+}
+
+
+/* Year of Struggle  */
+/* Home page */
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 106, 0.699),
+    rgba(16, 14, 39, 0)
+  );
+  color: #fff;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+/* Our Blog Images Overlay CSS */
+/* Of Home Page */
+
+.section p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(77, 77, 128, 0.699),
+    rgba(0, 0, 0, 0)
+  );
+  color: #fff;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  margin-top: 9%;
+}
+.overlay2:hover {
+  opacity: 1;
+  background: linear-gradient(to top, #e52c48, transparent);
+}
+
+.talk {
+  background-color: #061757;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+
+/* Wanna Talk to Us Backgorund Image CSS */
+
+.top-left-image,
+.bottom-right-image {
+  position: absolute;
+}
+
+.top-left-image {
+  top: 0;
+  left: 0;
+}
+
+.bottom-right-image {
+  bottom: 0;
+  right: 0;
+}
+
+.talk span,
+h2 {
+  color: white;
+  text-align: center;
+  display: block; /* Added */
+}
+.talk span {
+  color: #ffffff99;
+}
+
+.talk h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+
+.contact {
+  box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.17);
+  background-color: #e52c48;
+  border-radius: 15px;
+  margin: 20px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  padding: 17px 0px !important;
+}
+.contact span {
+  color: white;
+}
+
+.contact:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.contact:hover span {
+  color: #d92a43;
+}
+
+
+
+/* Blog Section Overlay */
+/* of Blog Page */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 106, 0.699),
+    rgba(16, 14, 39, 0)
+  );
+  color: #fff;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.overlay:hover{
+  opacity: 1;
+  background: linear-gradient(to top, #e52c48, transparent);
+  cursor: pointer;
+}
+
+.text
+{
+  display: block;
+  margin-top: 60%;
+  margin-right: 35%;
+}
+.text .fs-4
+{
+  margin-right: -70px;
+}
+
+
+
+/* Blogs Background Images CSS */
+#Blog
+{
+  
+  padding: 30px;
+}
+
+#Blogs
+{
+  margin-top: 100px;
+  background-image: url(https://demo.phlox.pro/agency-finance/wp-content/uploads/sites/245/2021/05/Group-52.svg);
+  background-position:5% 0%;
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.images
+{
+  background-image: url(https://demo.phlox.pro/agency-finance/wp-content/uploads/sites/245/2021/05/Group-56.svg);
+  background-size: 30%;
+  background-position:87% -2%;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/* Our Cases Overlay */
+/* Our Cases Page */
+.overlay3 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  margin-top: 65%;
+  height: 30%;
+  background: linear-gradient(
+    to top,
+    rgba(14, 14, 106, 0.699),
+    rgba(16, 14, 39, 0)
+  );
+  color: #fff;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.cases:hover
+{
+  cursor: pointer;
+}
+.cases:hover .overlay3{
+  opacity: 1;
+  background: linear-gradient(to top, #e52c48, transparent);
+}
+.overlay3 .text
+{
+  display: block;
+  margin-top: -10%;
+  margin-right: 50%;
+}
+.text-end
+{
+  margin-right:-50%;
+  
+}
+
+
+.load{
+  display: block;
+  margin-top: 60px;
+  margin: auto;
+  width: 220px;
+  background-color: #061757;
+  font-size: 30px;
+  color: white;
+  
+}
+.load:hover{
+  color: white;
+}
+
+
+
+/* Footer Button */
+#sub
+{
+  margin-top: -5px;
+}
+#sub:hover{
+  color: white !important;
+}
+
+
+.scrollTop{
+position: fixed;
+bottom: 20px;
+right: 20px;
+padding: 10px 10px;
+background-color: rgb(160, 152, 152);
+border-radius: 20px;
+cursor: pointer;
+transition: all 0.5s ease 0s;
+
+}
+
+.scrollTop:hover{
+  background-color: #000;
+  color: white;
+
+}
+
+
+/* Contact Us Inputs */
+
+
+#name,#email,#website,#comment
+{
+  border-radius: 10px;
+  border: 1px solid #F2F2F2;
+  background-color: #F2F2F2;
+}
